@@ -2,6 +2,34 @@
 
 import Foundation
 
+// MARK: - Helper structs
+struct Path {
+    static let SEPARATOR = "/"
+    
+    let pathString: String
+    let components: [String]
+    
+    init(fromString string: String) {
+        pathString = string.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: Path.SEPARATOR))
+        components = string.componentsSeparatedByString(Path.SEPARATOR)
+    }
+}
+
+struct Pattern {
+    static let SEPARATOR = ","
+    static let WILDCARD = "*"
+    
+    let patternString: String
+    let components: [String]
+    let numberOfWildcards: Int
+    
+    init(fromString string: String) {
+        patternString = string
+        components = string.componentsSeparatedByString(Pattern.SEPARATOR)
+        numberOfWildcards = components.filter{$0 == Pattern.WILDCARD}.count
+    }
+}
+
 // MARK: - Helper functions
 func writeToStdErr(str: String) {
     let handle = NSFileHandle.fileHandleWithStandardError()
