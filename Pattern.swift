@@ -27,9 +27,8 @@ struct Pattern {
 func < (lhs: Pattern, rhs: Pattern) -> Bool {
     if lhs.numberOfWildcards == rhs.numberOfWildcards {
         
-        for (index, leftComponent) in lhs.components.enumerate() {
-            let rightComponent = rhs.components[index]
-            
+        // Iterate through each component, up through the length of the shorter pattern
+        for (leftComponent, rightComponent) in zip(lhs.components, rhs.components) {
             if leftComponent == Pattern.WILDCARD && rightComponent == Pattern.WILDCARD {
                 // They are the both wildcards, keep searching
                 continue
@@ -42,7 +41,8 @@ func < (lhs: Pattern, rhs: Pattern) -> Bool {
             }
         }
         
-        // This will only exectute if two patterns are exactly the same
+        // If it gets here, the patterns are either exactly the same or different lengths
+        // which means we don't particularly care which order they go in
         return true
     } else {
         return lhs.numberOfWildcards < rhs.numberOfWildcards
