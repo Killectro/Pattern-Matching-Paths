@@ -47,6 +47,7 @@ guard let nString = readLine(), N = Int(nString) else {
     exit(EXIT_FAILURE)
 }
 
+var patterns = [Pattern]()
 var index = 0
 
 while index < N {
@@ -55,7 +56,7 @@ while index < N {
         exit(EXIT_FAILURE)
     }
     
-    print(pattern)
+    patterns.append(Pattern(fromString: pattern))
     index += 1
 }
 
@@ -65,6 +66,7 @@ guard let mString = readLine(), M = Int(mString) else {
     exit(EXIT_FAILURE)
 }
 
+var paths = [Path]()
 index = 0
 while index < M {
     guard let path = readLine() else {
@@ -72,6 +74,8 @@ while index < M {
         exit(EXIT_FAILURE)
     }
     
-    print(path)
+    paths.append(Path(fromString: path))
     index += 1
 }
+
+print(patterns.map{$0.components})
