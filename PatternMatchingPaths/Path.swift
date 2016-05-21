@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Path {
+struct Path: StringInitializable {
     static let SEPARATOR = "/"
     
     let pathString: String

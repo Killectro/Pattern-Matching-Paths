@@ -11,6 +11,7 @@
 		22E57ED01CF0B9ED0023BDF3 /* PathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E57ECF1CF0B9ED0023BDF3 /* PathTests.swift */; };
 		22E57ED71CF0C1600023BDF3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F31CF0B3390087E798 /* Path.swift */; };
 		22E57ED81CF0C1600023BDF3 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F41CF0B3390087E798 /* Pattern.swift */; };
+		22E57EDD1CF0E41A0023BDF3 /* StringInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E57EDC1CF0E41A0023BDF3 /* StringInitializable.swift */; };
 		22F804F51CF0B3390087E798 /* ErrorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F01CF0B3390087E798 /* ErrorOutput.swift */; };
 		22F804F61CF0B3390087E798 /* InputReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F11CF0B3390087E798 /* InputReader.swift */; };
 		22F804F71CF0B3390087E798 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F21CF0B3390087E798 /* main.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		22E57ECD1CF0B9000023BDF3 /* PatternTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternTests.swift; sourceTree = "<group>"; };
 		22E57ECF1CF0B9ED0023BDF3 /* PathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathTests.swift; sourceTree = "<group>"; };
+		22E57EDC1CF0E41A0023BDF3 /* StringInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringInitializable.swift; sourceTree = "<group>"; };
 		22F804E61CF0B28A0087E798 /* PatternMatchingPaths */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PatternMatchingPaths; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F804F01CF0B3390087E798 /* ErrorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorOutput.swift; sourceTree = "<group>"; };
 		22F804F11CF0B3390087E798 /* InputReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputReader.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 			name = "Model Tests";
 			sourceTree = "<group>";
 		};
+		22E57EDB1CF0E4000023BDF3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				22E57EDC1CF0E41A0023BDF3 /* StringInitializable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		22F804DD1CF0B28A0087E798 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 				22F804F21CF0B3390087E798 /* main.swift */,
 				22F804FA1CF0B4560087E798 /* Models */,
 				22F804FB1CF0B4660087E798 /* Helpers */,
+				22E57EDB1CF0E4000023BDF3 /* Protocols */,
 			);
 			path = PatternMatchingPaths;
 			sourceTree = "<group>";
@@ -224,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E57EDD1CF0E41A0023BDF3 /* StringInitializable.swift in Sources */,
 				22F804F91CF0B3390087E798 /* Pattern.swift in Sources */,
 				22F804F61CF0B3390087E798 /* InputReader.swift in Sources */,
 				22F804F71CF0B3390087E798 /* main.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Pattern {
+struct Pattern: StringInitializable {
     // MARK: - Properties
     static let SEPARATOR = ","
     static let WILDCARD = "*"
