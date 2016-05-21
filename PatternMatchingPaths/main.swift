@@ -6,9 +6,9 @@ import Foundation
 
 // Read patterns from stdin and put into memory
 let (patterns, paths) = InputReader.getPatternsAndPathsFromStandardInput()
-// Sort the patterns in order of "bestness" defined in problem requirements
 
-let sortedPatterns = patterns.sort(<)
+// Sort the patterns in order of "bestness" defined in problem requirements
+let sortedPatterns = patterns.sort(>)
 
 for path in paths {
     var output = "NO MATCH"

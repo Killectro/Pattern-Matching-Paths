@@ -49,7 +49,7 @@ extension Pattern {
     1. If one has less wildcards than the other, it is automatically better
     2. Otherwise if they are equal, the Pattern whose left-most `Pattern.WILDCARD` is farthest to the right is better
  */
-func < (lhs: Pattern, rhs: Pattern) -> Bool {
+func > (lhs: Pattern, rhs: Pattern) -> Bool {
     if lhs.numberOfWildcards == rhs.numberOfWildcards {
         
         // Iterate through each component, up through the length of the shorter pattern
