@@ -9,6 +9,7 @@
 import Foundation
 
 struct ErrorOutput {
+    /// Appends a newline and writes content out to stderr
     static func writeToStdErr(str: String) {
         let withNewline = str + "\n"
         

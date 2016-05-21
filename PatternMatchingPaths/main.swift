@@ -4,7 +4,7 @@ import Foundation
 
 // MARK: - Script entry point
 
-// Read patterns from stdin and put into memory
+// Read patterns and paths from stdin and put into memory
 let (patterns, paths) = InputReader.getPatternsAndPathsFromStandardInput()
 
 // Sort the patterns in descending order of "bestness" defined in problem requirements

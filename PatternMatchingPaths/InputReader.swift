@@ -9,6 +9,10 @@
 import Foundation
 
 struct InputReader {
+    /** Reads pattern and path data from stdin and returns it
+     
+    - Returns: A tuple with an array of `Pattern`s and an array of `Path`s
+    */
     static func getPatternsAndPathsFromStandardInput() -> ([Pattern], [Path]) {
         guard let nString = readLine(), N = Int(nString) else {
             ErrorOutput.writeToStdErr("Invalid input format: The first line of the file must be a number")
