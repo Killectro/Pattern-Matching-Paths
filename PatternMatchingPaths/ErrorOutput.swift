@@ -10,9 +10,11 @@ import Foundation
 
 struct ErrorOutput {
     static func writeToStdErr(str: String) {
+        let withNewline = str + "\n"
+        
         let handle = NSFileHandle.fileHandleWithStandardError()
         
-        if let data = str.dataUsingEncoding(NSUTF8StringEncoding) {
+        if let data = withNewline.dataUsingEncoding(NSUTF8StringEncoding) {
             handle.writeData(data)
         }
     }

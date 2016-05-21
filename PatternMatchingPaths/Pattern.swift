@@ -16,6 +16,9 @@ struct Pattern {
     let patternString: String
     let components: [String]
     let numberOfWildcards: Int
+    var numberOfComponents: Int {
+        return components.count
+    }
     
     // MARK: - Initializers
     init(fromString string: String) {
@@ -28,7 +31,7 @@ struct Pattern {
 // MARK: - Matching
 extension Pattern {
     func matchesPath(path: Path) -> Bool {
-        guard path.components.count == self.components.count else { return false }
+        guard path.numberOfComponents == self.numberOfComponents else { return false }
         
         for (patternComponent, pathComponent) in zip(self.components, path.components) {            
             if patternComponent != Pattern.WILDCARD && patternComponent != pathComponent {
@@ -40,7 +43,12 @@ extension Pattern {
     }
 }
 
-// Custom sort operator for Patterns
+// MARK: - Sorting
+/** Custom sort operator that sorts patterns by descending order of "bestness" (i.e. the best Pattern is first)
+    This is accomplished in two ways:
+    1. If one has less wildcards than the other, it is automatically better
+    2. Otherwise if they are equal, the Pattern whose left-most `Pattern.WILDCARD` is farthest to the right is better
+ */
 func < (lhs: Pattern, rhs: Pattern) -> Bool {
     if lhs.numberOfWildcards == rhs.numberOfWildcards {
         

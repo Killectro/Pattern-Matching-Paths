@@ -24,6 +24,7 @@ class PathTests: XCTestCase {
     func testPathInitializerCorrectlyPopulatesFields() {
         let path = Path(fromString: "/w/a/b/z")
         
+        XCTAssert(path.numberOfComponents == 4)
         XCTAssert(path.components.count == 4)
         XCTAssert(path.components == ["w","a","b","z"])
         XCTAssert(path.pathString == "w/a/b/z")

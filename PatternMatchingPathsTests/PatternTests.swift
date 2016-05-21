@@ -24,6 +24,7 @@ class PatternTests: XCTestCase {
     func testPatternInitializerCorrectlyPopulatesFields() {
         let pattern = Pattern(fromString: "hi,*,boop,*,wow")
         
+        XCTAssert(pattern.numberOfComponents == 5)
         XCTAssert(pattern.components.count == 5)
         XCTAssert(pattern.components == ["hi","*","boop","*","wow"])
         XCTAssert(pattern.patternString == "hi,*,boop,*,wow")
