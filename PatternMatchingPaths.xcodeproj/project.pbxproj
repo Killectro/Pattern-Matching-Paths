@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22E57ECE1CF0B9000023BDF3 /* PatternTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E57ECD1CF0B9000023BDF3 /* PatternTests.swift */; };
+		22E57ED01CF0B9ED0023BDF3 /* PathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E57ECF1CF0B9ED0023BDF3 /* PathTests.swift */; };
+		22E57ED71CF0C1600023BDF3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F31CF0B3390087E798 /* Path.swift */; };
+		22E57ED81CF0C1600023BDF3 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F41CF0B3390087E798 /* Pattern.swift */; };
 		22F804F51CF0B3390087E798 /* ErrorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F01CF0B3390087E798 /* ErrorOutput.swift */; };
 		22F804F61CF0B3390087E798 /* InputReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F11CF0B3390087E798 /* InputReader.swift */; };
 		22F804F71CF0B3390087E798 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F21CF0B3390087E798 /* main.swift */; };
 		22F804F81CF0B3390087E798 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F31CF0B3390087E798 /* Path.swift */; };
 		22F804F91CF0B3390087E798 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F804F41CF0B3390087E798 /* Pattern.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22E57ED51CF0BFEE0023BDF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22F804DE1CF0B28A0087E798 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22F804E51CF0B28A0087E798;
+			remoteInfo = PatternMatchingPaths;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		22F804E41CF0B28A0087E798 /* CopyFiles */ = {
@@ -27,12 +41,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		22E57ECD1CF0B9000023BDF3 /* PatternTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternTests.swift; sourceTree = "<group>"; };
+		22E57ECF1CF0B9ED0023BDF3 /* PathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathTests.swift; sourceTree = "<group>"; };
 		22F804E61CF0B28A0087E798 /* PatternMatchingPaths */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PatternMatchingPaths; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F804F01CF0B3390087E798 /* ErrorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorOutput.swift; sourceTree = "<group>"; };
 		22F804F11CF0B3390087E798 /* InputReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputReader.swift; sourceTree = "<group>"; };
 		22F804F21CF0B3390087E798 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		22F804F31CF0B3390087E798 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		22F804F41CF0B3390087E798 /* Pattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
+		22F805001CF0B7DD0087E798 /* PatternMatchingPathsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PatternMatchingPathsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F805041CF0B7DD0087E798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,13 +61,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22F804FD1CF0B7DD0087E798 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22E57ED91CF0C1850023BDF3 /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				22E57ECD1CF0B9000023BDF3 /* PatternTests.swift */,
+				22E57ECF1CF0B9ED0023BDF3 /* PathTests.swift */,
+			);
+			name = "Model Tests";
+			sourceTree = "<group>";
+		};
 		22F804DD1CF0B28A0087E798 = {
 			isa = PBXGroup;
 			children = (
 				22F804E81CF0B28A0087E798 /* PatternMatchingPaths */,
+				22F805011CF0B7DD0087E798 /* PatternMatchingPathsTests */,
 				22F804E71CF0B28A0087E798 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				22F804E61CF0B28A0087E798 /* PatternMatchingPaths */,
+				22F805001CF0B7DD0087E798 /* PatternMatchingPathsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +126,15 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		22F805011CF0B7DD0087E798 /* PatternMatchingPathsTests */ = {
+			isa = PBXGroup;
+			children = (
+				22E57ED91CF0C1850023BDF3 /* Model Tests */,
+				22F805041CF0B7DD0087E798 /* Info.plist */,
+			);
+			path = PatternMatchingPathsTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +155,24 @@
 			productReference = 22F804E61CF0B28A0087E798 /* PatternMatchingPaths */;
 			productType = "com.apple.product-type.tool";
 		};
+		22F804FF1CF0B7DD0087E798 /* PatternMatchingPathsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22F805051CF0B7DD0087E798 /* Build configuration list for PBXNativeTarget "PatternMatchingPathsTests" */;
+			buildPhases = (
+				22F804FC1CF0B7DD0087E798 /* Sources */,
+				22F804FD1CF0B7DD0087E798 /* Frameworks */,
+				22F804FE1CF0B7DD0087E798 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22E57ED61CF0BFEE0023BDF3 /* PBXTargetDependency */,
+			);
+			name = PatternMatchingPathsTests;
+			productName = PatternMatchingPathsTests;
+			productReference = 22F805001CF0B7DD0087E798 /* PatternMatchingPathsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -121,6 +184,9 @@
 				ORGANIZATIONNAME = Killectro;
 				TargetAttributes = {
 					22F804E51CF0B28A0087E798 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					22F804FF1CF0B7DD0087E798 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -138,9 +204,20 @@
 			projectRoot = "";
 			targets = (
 				22F804E51CF0B28A0087E798 /* PatternMatchingPaths */,
+				22F804FF1CF0B7DD0087E798 /* PatternMatchingPathsTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22F804FE1CF0B7DD0087E798 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		22F804E21CF0B28A0087E798 /* Sources */ = {
@@ -155,7 +232,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22F804FC1CF0B7DD0087E798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E57ED71CF0C1600023BDF3 /* Path.swift in Sources */,
+				22E57ED81CF0C1600023BDF3 /* Pattern.swift in Sources */,
+				22E57ED01CF0B9ED0023BDF3 /* PathTests.swift in Sources */,
+				22E57ECE1CF0B9000023BDF3 /* PatternTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22E57ED61CF0BFEE0023BDF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22F804E51CF0B28A0087E798 /* PatternMatchingPaths */;
+			targetProxy = 22E57ED51CF0BFEE0023BDF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		22F804EB1CF0B28A0087E798 /* Debug */ = {
@@ -243,6 +339,9 @@
 		22F804EE1CF0B28A0087E798 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,7 +349,41 @@
 		22F804EF1CF0B28A0087E798 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		22F805061CF0B7DD0087E798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = PatternMatchingPathsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.killectro.PatternMatchingPathsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		22F805071CF0B7DD0087E798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = PatternMatchingPathsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.killectro.PatternMatchingPathsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
 		};
@@ -271,6 +404,15 @@
 			buildConfigurations = (
 				22F804EE1CF0B28A0087E798 /* Debug */,
 				22F804EF1CF0B28A0087E798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22F805051CF0B7DD0087E798 /* Build configuration list for PBXNativeTarget "PatternMatchingPathsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F805061CF0B7DD0087E798 /* Debug */,
+				22F805071CF0B7DD0087E798 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
