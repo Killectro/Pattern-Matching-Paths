@@ -45,7 +45,9 @@ cat input_file_name.txt | ./Build/Products/Debug/PatternMatchingPaths > output_f
 
 ## Building in Xcode
 
-If you would rather build the executable yourself in Xcode you can open up the `.xcodeproj` file in Xcode and press `Command + B` to build a new version of the executable to the `Build/Products/Debug` directory.
+This project was built in Xcode because its much simpler to write and run tests in Xcode than it is to run `xctest` manually. If you would like to run the tests yourself, you can open up the `.xcodeproj` file in Xcode and press `Command + U`. 
+
+If you would rather build the executable yourself in Xcode simply press `Command + B` to output a new version of the executable to the `Build/Products/Debug` directory.
 
 ## Extra Credit
 
